@@ -127,21 +127,21 @@ flowchart LR
     ```
 4. 升级之后再调用proxy执行的逻辑就遵循`logicV2 contract`,同时从前在`logicV1 contract`执行后保存的状态依旧会得到保留和继承
 ## 单元测试
-单元测试主要测试`admin contrat`的`upgarde()`功能
-单元测试:
+单元测试主要测试`admin contrat`的`upgarde()`功能:
+
     ```bash
     Voting
       test logicV1 contract
-      ✔ should return correct state
-    test logicV2 contract
-      ✔ should return correct state
-    test admin contract
-      upgrade
-        ✔ should allow owner upgrade contract
-        ✔ reverts when non-owner tries to upgrade
-      changeProxyAdmin
-        ✔ reverts when non-owner tries to change proxy admin
-      transferOwnership
-        ✔ should allow owner transfer ownership
-        ✔ reverts when non-owner tries to transfer ownership
+        ✔ should return correct state
+      test logicV2 contract
+        ✔ should return correct state
+      test admin contract
+        upgrade
+          ✔ should allow owner upgrade contract
+          ✔ reverts when non-owner tries to upgrade
+        changeProxyAdmin
+          ✔ reverts when non-owner tries to change proxy admin
+        transferOwnership
+          ✔ should allow owner transfer ownership
+          ✔ reverts when non-owner tries to transfer ownership
     ```
