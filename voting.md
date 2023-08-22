@@ -128,8 +128,7 @@ flowchart LR
 4. 升级之后再调用proxy执行的逻辑就遵循`logicV2 contract`,同时从前在`logicV1 contract`执行后保存的状态依旧会得到保留和继承
 ## 单元测试
 单元测试主要测试`admin contrat`的`upgarde()`功能
-4. 单元测试:
-
+单元测试:
     ```bash
     Voting
       test logicV1 contract
